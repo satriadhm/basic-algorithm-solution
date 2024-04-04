@@ -1,0 +1,48 @@
+1. Algoritma gerbang tol 
+program gerbangtol
+kamus 
+    n : integer
+    input : string
+    sum : integer
+    totA : integer
+    totB : integer
+    totB : integer
+Algoritma  
+    input n
+    for i = 1 to n do
+        input input
+        if input == "A" then
+            sum <- sum + 10000
+            totA <- totA + 1
+        else if input == "B" then
+            sum <- sum + 23000
+            totB <- totB + 1
+        else if input == "C" then
+            sum <- sum + 45000
+            totC <- totC + 1
+        endif
+    endfor
+    output sum, totA, totB, totC
+endprogram
+2. Algoritma angka rahasia
+
+program angkarahasia
+kamus 
+    tebak : integer
+    salah : integer
+    angka1 : integer
+    angka2 : integer
+    con : integer
+Algoritma 
+    input tebak
+    if tebak < 100 then
+        angka1 <- tebak / 10
+        angka2 <- tebak mod 10
+        input salah
+        while salah != angka1 or salah != angka2 or salah != tebak do
+            input salah
+            con <- con + 1
+        endwhile
+    endif
+    output con  
+endprogram

@@ -1,0 +1,49 @@
+1. Algoritma konversi detik, menit, dan jam
+
+program Waktu
+kamus
+    detik : integer
+    jam : integer
+    menit : integer
+Algoritma 
+    input detik
+    jam <- detik / 3600
+    menit <- (detik mod 3600) / 60
+    detik <- (detik mod 3600) mod 60
+    output jam "jam", menit "menit", detik "detik"
+endprogram
+
+2. Algoritma bilangan konsekutif
+
+program konsekutif
+kamus 
+    angka : integer
+    a1 : integer
+    a2 : integer
+    a3 : integer
+    a4 : integer
+    truth : boolean
+Algoritma  
+    input angka
+    if angka >= 1000 and angka <= 9999    
+        a1 <- angka / 1000
+        a2 <- (angka mod 1000) / 100
+        a3 <- (angka mod 100) / 10
+        a4 <- (angka mod 10)
+
+        if a1 - a2 == 1 then
+            if a2 - a3 == 1 then
+                if a3 - a4 == 1 then
+                    truth <- True
+                else    
+                    truth <- False
+                endif
+            else
+                truth <- False
+            endif
+        else
+            truth <- False
+        endif 
+    endif
+    output angka "terurut naik? ", truth
+endprogram
